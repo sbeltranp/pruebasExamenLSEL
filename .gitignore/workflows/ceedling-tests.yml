@@ -1,0 +1,17 @@
+name: Ceedling Testing
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Current Repo Clone
+        uses: actions/checkout@v4
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+      - name: Install Ceedling
+        run: gem install ceedling
+      - name: Run Unit Tests
+        run: |
+          CUR=$PWD; for i in `find . -type d -name 'ceedling'`; do cd $CUR; echo $i; cd $i; ceedling test:all; done
