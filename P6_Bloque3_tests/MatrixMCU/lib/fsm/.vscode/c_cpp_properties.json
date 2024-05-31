@@ -1,0 +1,53 @@
+{
+    "configurations": [
+        {
+            "name": "Ubuntu20-ceedling",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/include/",
+                "${workspaceFolder}/ceedling/build/test/mocks",
+                "/var/lib/gems/2.7.0/gems/ceedling-0.31.1/vendor/unity/src/",
+                "/var/lib/gems/2.7.0/gems/ceedling-0.31.1/vendor/cmock/src/",
+                "${workspaceFolder}/ceedling/test/support/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            "name": "Ubuntu22-ceedling",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/include/",
+                "${workspaceFolder}/ceedling/build/test/mocks",
+                "/var/lib/gems/3.0.0/gems/ceedling-0.31.1/vendor/unity/src/",
+                "/var/lib/gems/3.0.0/gems/ceedling-0.31.1/vendor/cmock/src/",
+                "${workspaceFolder}/ceedling/test/support/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            "name": "osx-ceedling",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/include/",
+                "${workspaceFolder}/ceedling/build/test/mocks",
+                "${GEM_HOME}/gems/ceedling-0.31.1/vendor/unity/src/",
+                "${GEM_HOME}/gems/ceedling-0.31.1/vendor/cmock/src/",
+                "${workspaceFolder}/ceedling/test/support/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}

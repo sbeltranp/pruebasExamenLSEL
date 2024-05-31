@@ -1,0 +1,13 @@
+{
+    "ceedlingExplorer.problemMatching": {
+        "mode": "gcc"
+    },
+    "ceedlingExplorer.debugConfiguration": "Ceedling - Debug test",
+    "ceedlingExplorer.prettyTestLabel": true,
+    "ceedlingExplorer.projectPath": "./ceedling",
+    "files.associations": {
+        "fsm.h": "c",
+        "mock_test_fsm.h": "c",
+        "stdlib.h": "c"
+    },
+}
