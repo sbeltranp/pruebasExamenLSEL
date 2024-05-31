@@ -1,5 +1,8 @@
 name: Ceedling Testing
-on: workflow_dispatch
+on:
+  push:
+    branches:
+    - 'main'
 jobs:
   test:
     runs-on: ubuntu-20.04
