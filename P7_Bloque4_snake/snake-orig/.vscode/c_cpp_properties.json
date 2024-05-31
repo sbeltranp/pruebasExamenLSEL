@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "native-rpi_hat",
+            "includePath": [
+                "${workspaceFolder}/common/**",
+                "${workspaceFolder}/common/include/",
+                "${workspaceFolder}/port/rpi/**",
+                "${workspaceFolder}/port/rpi/include/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-arm"
+        },
+        {
+            "name": "cross-rpi_hat 64-bit",
+            "includePath": [
+                "${workspaceFolder}/common/**",
+                "${workspaceFolder}/common/include/",
+                "${workspaceFolder}/port/rpi_hat/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/aarch64-linux-gnu-gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-arm"
+        },
+    ],
+    "version": 4
+}

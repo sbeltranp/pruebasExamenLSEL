@@ -1,0 +1,29 @@
+ifeq ($(OS),Windows_NT)
+EXT = .exe
+else
+EXT = 
+endif
+
+PREFIX = 
+
+SOURCES += $(wildcard $(patsubst %,%/*.c, $(PORT)/$(PLATFORM)/src))
+
+# ASM sources
+AS_SOURCES += 
+
+# macros for gcc
+# AS defines
+AS_DEFS += 
+
+# C defines
+C_DEFS += 
+
+# AS includes
+AS_INCLUDES += 
+
+# Directories with required header files for port files
+INCLUDES += -I$(PORT)/$(PLATFORM)/include
+
+bin: $(OUTPUT)/$(TARGET)$(EXT)
+
+.PHONY: bin

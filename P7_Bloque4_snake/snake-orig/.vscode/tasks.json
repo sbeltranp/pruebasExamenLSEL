@@ -1,0 +1,82 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build rpi_hat native",
+			"options": {
+				"cwd": "${workspaceRoot}"
+			},
+			"group": {
+				"kind": "build"
+			},
+			"linux": {
+				"command": "make"
+			},
+			"osx": {
+				"command": "make"
+			},
+			"windows": {
+				"command": "mingw32-make"
+			},
+			"args": [
+				"PLATFORM=rpi_hat"
+			]
+		},
+		{
+			"label": "Build rpi_hat Cross RPi 64-bit",
+			"options": {
+				"cwd": "${workspaceRoot}"
+			},
+			"group": {
+				"kind": "build"
+			},
+			"linux": {
+				"command": "make"
+			},
+			"osx": {
+				"command": "make"
+			},
+			"windows": {
+				"command": "mingw32-make"
+			},
+			"args": [
+				"PLATFORM=rpi_hat", "PREFIX=aarch64-none-linux-gnu-"
+			]
+		},
+		{
+			"label": "Clean",
+			"command": "make",
+			"options": {
+				"cwd": "${workspaceRoot}"
+			},
+			"linux": {
+				"command": "make"
+			},
+			"osx": {
+				"command": "make"
+			},
+			"windows": {
+				"command": "mingw32-make"
+			},
+			"args": [
+				"clean"
+			]
+		},
+		{
+			"label": "Clean & Re-Build rpi_hat native",
+			"dependsOn": [
+				"Clean",
+				"Build rpi_hat native"
+			],
+			"dependsOrder": "sequence"
+		},
+		{
+			"label": "Clean & Re-Build rpi_hat cross 64-bit",
+			"dependsOn": [
+				"Clean",
+				"Build rpi_hat Cross RPi 64-bit"
+			],
+			"dependsOrder": "sequence"
+		}
+	]
+}
